@@ -1,0 +1,45 @@
+
+
+    {% extends "contenido/encabezado.html" %}
+
+{% block titulo %} PRINCIPAL 
+{% endblock %}
+
+{%block imagen%}
+    {%load static%}
+    
+    {%static 'inicio/images/inicio.png'%}
+
+{%endblock%}
+
+{%block contenido%}
+			<!--Encabezdo -->
+			 <div class="container-md border border-pink">
+			<div class="page-header">
+				<div class="page-title">
+					<h3><h1>Bienvenido Usuario.</h1>
+					<small>Objetivo</small></h3>
+					 {%block barra%}
+               		<div class="sidebar-content">
+                    <!-- Menú de navegación -->
+					<nav aria-label="breadcrumb">
+ 					 <ol class="breadcrumb">
+   					 <li class="breadcrumb-item active" aria-current="page">Principal </a></li>
+   					 <li class="breadcrumb-item text-info">Contacto </a></li>
+ 					 <li class="breadcrumb-item text-info">Cursos </a></li>
+					 </ol>
+					</nav>
+                    <ul class="navigation">    	
+                    </ul>
+                    <!-- /Fin menú -->
+                </div>
+				</div>
+				</div>
+				</div>
+				
+                {%endblock %}
+                
+			
+			
+			<!-- /Encabezado-->
+{%endblock%}

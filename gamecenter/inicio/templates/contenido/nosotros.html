@@ -1,0 +1,92 @@
+
+
+    {% extends "contenido/encabezado.html" %}
+
+{% block titulo %} NOSOTROS 
+{% endblock %}
+
+{%block imagen%}
+    {%load static%}
+    
+    {%static 'inicio/images/inicio.png'%}
+
+{%endblock%}
+
+{%block contenido%}
+		<!--Tabla alumnos-->
+           <div class="row">
+		   
+    <div id="sidebar-container" class="sidebar-expanded col-2 d-none d-md-block">
+	<nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <ul class="list-group sticky-top sticky-offset">
+            <li>Ofertas</li>
+            <li>Menu item..</li>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+        </ul>
+    </div>
+	
+    <div class="col">
+	</nav>
+        <!-- MAIN -->
+    
+         <div class="container border border-danger">          
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr class="border-danger">
+					<th>Foto del Articilo</th>
+					<th></th>
+					
+				</tr>
+			</thead>
+			<tbody>
+                 {% for venta in ventas %}
+				<tr class="border-danger">
+					<td class="text-center ">
+						<img src="{{venta.imagen.url}}" alt="" class="img-media " width="150" height="140">
+					</td>
+					<td class="muted"><b>Nombre del Articilo: </b> {{venta.nombre}}<br><b>Detalles del Articilo: </b> <br>{{venta.descripcion}}<br><b>Colores disponibles: </b>{{venta.color}}<br><b>Precio: </b>{{venta.precio}}<br><b>Cantidad: </b>{{venta.cantidad}}</td>
+					
+				</tr>
+                {% endfor %} 
+			</tbody>
+		</table>
+		</div>
+		</div>
+</div>
+		<!--End tabla alumnos-->
+				
+                {%endblock %}
+                
+                
+			
+			
+			<!-- /Encabezado-->
+{%endblock%}
