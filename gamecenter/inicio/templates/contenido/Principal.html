@@ -1,0 +1,47 @@
+
+
+    {% extends "contenido/encabezado.html" %}
+
+{% block titulo %} PRINCIPAL 
+{% endblock %}
+
+{%block imagen%}
+    {%load static%}
+    
+    {%static 'inicio/imagenes/home.png'%}
+
+{%endblock%}
+
+{%block contenido%}
+			<!--Tabla alumnos-->
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Foto del Articilo</th>
+					<th>Nombre del Articilo</th>
+					<th>Descripcion del Articilo</th>
+					<th>Color del Articilo</th>
+					<th>Precio</th>
+					<th>Cantidad</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="text-center">
+						<img src="{{venta.imagen.url}}" alt="" class="img-media">
+					</td>
+					<td class="muted">{{venta.nombre}}</td>
+					<td class="text-semibold">{{venta.descripcion}}</td>
+					<td class="muted">{{venta.color}}</td>
+					<td class="muted">{{venta.precio}}</td>
+					<td class="muted">{{venta.cantidad}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--End tabla alumnos-->
+				
+                {%endblock %}
+                
+			
+			
+	
